@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kartikey Pandey Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Kartikey Pandey</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <li class="nav-item"><a href="#Achievements-section" class="nav-link"><span>Achievements</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Greetings!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Kartikey Pandey</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Engineer  ',
+						'MBA  ',
+						'Researcher   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Data Science & Business Enthusiast</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://github.com/kpki11" class="btn btn-white btn-outline-white py-3 px-4">My works</a>
+						   <a href="https://www.researchgate.net/profile/Kartikey-Pandey-11/publications" class="btn btn-primary py-3 px-4">Publications</a> 
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s"><b>Name:</b> </span> <span>Kartikey Pandey</span></p>
+										<p><span class="title-s"> <b>Current Role:</b> </span> <span>MBA Student</span></p>
+										<p><span class="title-s"><b>College: </b></span> <span>IIM Sirmaur</span></p>
+										<p><span class="title-s"><b>Previous Role: </b></span> <span>Data Analyst@  Hind Adsoft</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>SQL</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Python</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Data Visualization</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>Computational Modelling</span> <span class="pull-right">87%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With a strong foundation in <b>Metallurgical Engineering</b> from <b> BHU</b> and a proven track record in <b>data science</b> and <b>business analytics</b>, I excel in data analysis, machine learning, and computational simulations. I have driven impactful projects as a Data Analyst at Hind Adsoft Pvt. Ltd. and engineered predictive models as an ML Engineer Trainee at Quantiphi Inc. My research in computational metallurgy has been <b>published</b>, highlighting my expertise. Currently pursuing an <b>MBA</b> from <b>IIM Sirmaur</b>, I am focused on integrating <b>business strategy</b> with technical skills to deliver innovative solutions.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span><b>Profile:</b></span> <span>Data Science &amp; Business Analytics</span></li>
+									<li class="d-flex"><span><b>Domain Intrest:</b></span> <span>Analytics, Operations &amp; Digital Marketing</span></li>
+									<li class="d-flex"><span><b>Education:</b></span> <span>B.Tech & M.Tech</span></li>
+									<li class="d-flex"><span><b>Language:</b></span> <span>English, Hindi</span></li>
+									<li class="d-flex"><span><b>BI Tools:</b></span> <span>Microsoft Power BI, &amp; Tableau</span></li>
+									<li class="d-flex"><span><b>Other Skills:</b></span> <span>MS Excel, MySQL, Google Analytics &amp; Burai</span></li>
+									<li class="d-flex"><span><b>Hobbies:</b></span> <span>Traveling, Astro Photography, Cinematography </span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="8">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/kartikey-pandey1011/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p> I am an experienced professional with an engineering background from IIT BHU, currently pursuing my MBA at IIM Sirmaur. I have hands-on experience in operations and data analysis, using tools like Python, SQL, and Tableau. I am eager to apply my skills in operations and data analyst roles to drive strategic decisions and optimize processes.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb '24-Jul '24</span>
+						<h2>Data Analyst</h2>
+						<span class="position">Hind Adsoft Pvt. Ltd.</span>
+						<p class="mt-4">Hind IT Solution is a leading provider of business communication platforms, specializing in Bulk SMS, Digital Marketing, and Website Designing. Committed to innovation and customer satisfaction, the company delivers high-quality, cost-effective services tailored to meet the unique needs of its clients. 
+							<ul>
+								<li>Led comprehensive data analysis and dashboard creation for Clients using MySQL and Tableau. Enhanced decision-making, reduced data processing time by 20%, and improved sales performance significantly by 10%.</li>
+								<li>Conducted in-depth analysis of 17,000 applications on Google Play and the App Store, delivering insights into profitable app profiles and market trends. Refined development strategies and uncovered revenue potential.</li>
+								<li>Developed Tableau dashboards with sales trends and products, enhancing data visualization and decisions.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jul '23-Jan'24</span>
+						<h2>ML Engineer Intern</h2>
+						<span class="position">QuantiPhi </span>
+						<p class="mt-4">Quantiphi, an award-winning AI-first digital engineering company founded in 2013, is dedicated to transforming businesses through innovative solutions. By combining deep industry expertise, disciplined cloud and data engineering, and cutting-edge AI research, Quantiphi addresses complex challenges and drives accelerated, measurable business outcomes, solidifying its reputation as a leader in the digital transformation space.  
+							<ul>
+								<li>Gained hands-on experience with machine learning models such as linear regression, logistic regression and KNN. Developed skills in implementation, hyperparameter tuning, and performance evaluation using accuracy and F1 score.</li>
+								<li>Developed a CNN model for heart condition prediction with 92%+ accuracy and an interactive PDF chatbot using OpenAI’s API. Showcased skills in data preprocessing, feature extraction, and client collaboration neatly.</li>
+								
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2018-2023</span>
+    					<h2>Bachelor and Master of Technology</h2>
+    					<span class="position">Metallurgy, IIT-BHU</span>
+    					<p class="mt-4">Grade: 81.6%</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2024-Present</span>
+    					<h2>Masters in Business Administration</h2>
+    					<span class="position">IIM Sirmaur</span>
+    					<p class="mt-4">Interests: Data Analytics and Operations</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://docs.google.com/document/d/1GStDL1OrZIiMTQA5PQaWhCQY9a0aOyZG/edit?usp=sharing&ouid=109458921863879310428&rtpof=true&sd=true" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Tabeleau & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/kpki11/Sales_Insight" class="block-20 zoom-effect" style="background-image: url('images/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/kpki11/Sales_Insight">Sales Insight of App Market Data Analysis using Python</a></h3>
+                <p>Analyzed mobile app data to identify profitable profiles in the App Store and Google Play markets, aiming to guide app development and maximize revenue.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/kpki11/Heart-Failure-Prediction-Using-Keras" class="block-20 zoom-effect" style="background-image: url('images/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/kpki11/Heart-Failure-Prediction-Using-Keras">Heart Failure Prediction Using Keras</a></h3>
+                <p>Developed a CNN model using Keras to predict heart disease based on synthetic health data, achieving over 90% accuracy while maintaining data privacy.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/kpki11/SQL_Tabaleau_Dashboard" class="block-20 zoom-effect" style="background-image: url('images/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/kpki11/SQL_Tabaleau_Dashboard">SQL and Tableau Dashboard for Sales Analysis</a></h3>
+                <p>Developed a Tableau dashboard using MySQL to analyze sales data from AtliQ Hardware, providing interactive visualizations to support business decision-making.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/kpki11/Offline_ChatGpt_like_app" class="block-20 zoom-effect" style="background-image: url('images/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/kpki11/Offline_ChatGpt_like_app">Offline ChatGPT-Like App for Question Answering</a></h3>
+				  <p>Created a PDF chatbot using LangChain, OpenAI, and Panel, with plans to enhance it for offline use with proprietary data for secure, tailored solutions.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/kpki11/Exploring-Stock-Price-Prediction-with-Deep-Learning" class="block-20 zoom-effect" style="background-image: url('images/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/kpki11/Exploring-Stock-Price-Prediction-with-Deep-Learning">Exploring Stock Price Prediction with Deep Learning</a></h3>
+				  <p>Used GRU neural networks with TensorFlow and Keras to predict stock prices, achieving a peak RMSE and explored other models for comparison.</p>
+				</div>
+			  </div>
+			</div>
+		 </div>
+	  </div>
+    </section>
+<section class="ftco-section ftco-no-pb" id="Achievements-section">
+	<div class="container">
+		<div class="row justify-content-center pb-5">
+	  <div class="col-md-10 heading-section text-center ftco-animate">
+		  <h1 class="big big-2">Achievements</h1>
+		<h2 class="mb-4">Achievements</h2>
+		<div class="underline"></div>
+	  </div>
+	</div>
+	
+	<br>
+	
+	<div class="row">
+			<div class="container">
+				<div class="resume-wrap ftco-animate">
+					<span class="date"><center>Academic</center></span>
+					
+				
+						<ul>
+						<center>
+							<p>Achieved 99.02 percentile in CAT 2023, excelling in Quantitative Aptitude and Verbal Reasoning</p>
+							<p>Secured an AIR of 1011 in the Graduate Aptitude Test in Engineering (GATE) 2022 in Physics (PE)
+							</p>
+							<p>Achieved All India Rank of 9287 in JEE Advanced 2018, securing admission to IIT BHU, Varanasi
+							</p>
+							<p>Achieved All India Rank of 3223 in JEE Mains 2018
+							</p>
+							<p>Attained a perfect 10/10 CGPA in 10th standard board examinations, demonstrating Academic excellence</p>
+						</center>
+						</ul>
+					</p>
+
+					<span class="date"><center>Extra-Curricular</center></span>
+					
+				
+						<ul>
+						<center>
+							<p>Attained a band score of 7.5 in IELTS ′22 with CEFR C1, showcasing advanced English proficiency
+							</p>
+							<p>Participated in the International Asteroid Search Campaign ’21 and did preliminary asteroid detection
+							</p>
+							<p>Attended various national and inter-national workshops in field of BioTechnology and Data-Driven Simulations like CHARMM-GUI CECAM & Materials Flagship Workshop Switzerland, Workshop on Simulation methods in Scientific Computing, IIT Kharagpur, Computer Aided Drug Design Course  by NPTEL. </p>
+						</center>
+						</ul>
+					</p>
+				</div>
+
+			</div>
+
+			
+		</div>
+	<br>
+</section>
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="323">0</strong>
+                <span>Mentored Students</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/kpki11" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Jaipur, Rajasthan, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+ 91 8764196136</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:mba24098@iimsirmaur.ac.in">Mail 1</a></p>
+				<p><a href="mailto:kpki11ga@gmail.com">Mail 2</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1OEf2iT2F-IMjqaGpqybb0HJd2pxtYQhd/view?usp=sharing">Click to Download</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGDmEhMVso6rtHi0xwASZBt6PysZBlQuktvdQjPFFPUSTUqQ/viewform?usp=sharing" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <li class="ftco-animate"><a href="https://www.youtube.com/channel/UC9autGc2iaCKT7r8ePh7ZxQ"><span class="icon-youtube"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/kartikey-pandey1011/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://www.instagram.com/mags_of_mayhem/"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://www.instagram.com/mags_of_mayhem/"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/mags_of_mayhem/"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
